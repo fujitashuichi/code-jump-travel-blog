@@ -7,6 +7,35 @@
 	box-sizing: border-box;
 }
 
+img {
+	width: 100%;
+	object-fit: cover;
+}
+
+ul {
+	list-style: none;
+}
+
+a, .Link {
+	color: #fff;
+	text-decoration: none;
+}
+
+Link {
+	text-decoration: none;
+}
+
+
 .App {
 	font-family: "Noto Sans", "Noto Sans JP", sans-serif;
+}
+
+#header {
+	position: sticky;
+	top: 0;
+}
+
+.contentWrapper {
+	max-width: 1200px;
+	margin: 0 auto;
 }

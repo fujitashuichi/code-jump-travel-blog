@@ -1,1 +1,0 @@
-# code-jump-travel-blog
