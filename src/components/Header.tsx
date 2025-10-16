@@ -14,7 +14,9 @@ function Header() {
         <header id="header">
             <Inner style={{ padding: "20px 0" }}>
                 <h1 className='siteTitle' style={styles.siteTitle}>
-                    <img src='/img/logo.svg' alt='Travel Blog' />
+                    <Link to="/" className='Link'>
+                        <img src='/img/logo.svg' alt='Travel Blog' />
+                    </Link>
                 </h1>
             </Inner>
             <nav id='globalNav' style={styles.globalNav}>
