@@ -12,7 +12,7 @@ function Header() {
 
     return (
         <header id="header">
-            <Inner style={{ padding: "20px 0" }}>
+            <Inner style={{ padding: "20px 15px" }}>
                 <h1 className='siteTitle' style={styles.siteTitle}>
                     <Link to="/" className='Link'>
                         <img src='/img/logo.svg' alt='Travel Blog' />
@@ -42,7 +42,8 @@ const styles = {
     },
     Inner: {
         maxWidth: "1200px",
-        margin: "0 auto"
+        margin: "0 auto",
+        padding: "0 15px"
     },
     globalNav: {
         padding: "12px 0",

@@ -74,7 +74,7 @@ const styles = {
         maxWidth: "1200px",
         justifyContent: "space-between",
         margin: "0 auto",
-        padding: "55px 0"
+        padding: "55px 15px"
     },
     Section: {
         width: "30%"

@@ -1,14 +1,10 @@
 import React, { JSX } from 'react'
-import styled from 'styled-components'
 import articles from '../data/articlesData';
 import ReadMoreBtn from '../components/ReadMoreBtn';
+import { Outlet } from 'react-router-dom';
 
 
 function HomePage() {
-    const Article = styled.article`
-        ${{ ...styles.Article }}
-    `
-
     const pickUpArticles = (articleIds: number[]) => {
         let pickUpArticles: JSX.Element[] = [];
         articleIds.forEach(((articleId, key) => {
@@ -21,13 +17,13 @@ function HomePage() {
                 } = articles[articleId];
 
             const pickUpArticle: JSX.Element =
-                <Article key={key} className='article' style={styles.pickUp}>
+                <article key={key} className='article' style={styles.pickUp}>
                     <img src={`${data.img}`} alt=''></img>
                     <p className='articleTitle' style={styles.pickUpTitle}>
                         {data.title}
                     </p>
                     <ReadMoreBtn articleId={articleId} />
-                </Article>;
+                </article>;
             pickUpArticles.push(pickUpArticle);
         }));
         return pickUpArticles;
@@ -39,24 +35,25 @@ function HomePage() {
             <section id='pickUpArea' style={styles.pickUpArea}>
                 {pickUpArticles([0, 1, 2])}
             </section>
-            <section id="mainArea"></section>
+            <section id="mainArea">
+                <Outlet />
+            </section>
         </main>
     )
 }
 
 const styles = {
-    Article: {
-
-    },
     pickUpArea: {
         display: "flex",
-        justifyContent: "space-between"
+        justifyContent: "space-between",
+        borderBottom: "70px"
     },
     pickUp: {
         width: "32%"
     },
     pickUpTitle: {
-        height: "45px"
+        height: "45px",
+        overflow: "hidden"
     }
 }
 

@@ -8,7 +8,7 @@ interface ArticleProps {
 function ReadMoreBtn({ articleId }: ArticleProps) {
     return (
         <div className='readMoreBtn'>
-            <Link to={`/article/${articleId}`}>READ MORE</Link>
+            <Link to={`/article/${articleId}`} className='Link'>READ MORE</Link>
         </div>
     )
 }

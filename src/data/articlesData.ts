@@ -1,3 +1,5 @@
+// 新しい記事データは末尾に加えられる
+
 const articles: {
         title: string;
         main: string;
