@@ -41,6 +41,41 @@ iframe {
 	margin: 0 auto;
 }
 
+/* ReadMoreBtn, article */
+.readMoreBtn {
+	width: fit-content;
+	margin: 0 auto;
+	padding: 20px 0;
+	cursor: pointer;
+}
+
+.readMoreBtn p {
+	position: relative;
+}
+
+.readMoreBtn p::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	width: 100%;
+	height: 0;
+	transform: translateX(-50%);
+	border-bottom: 1px solid #000;
+	transition: all 0.3s;
+}
+
+.readMoreBtn:hover p::after {
+	transform: translateX(-50%) translateY(10px);
+	opacity: 0;
+}
+
+
+/* HomePage */
+.articleText {
+	width: 100%;
+}
+
 
 /* header */
 
@@ -48,6 +83,8 @@ iframe {
 	position: sticky;
 	top: 0;
 	width: 100%;
+	background: #fff;
+	margin-bottom: 40px;
 }
 
 #header .Link {
