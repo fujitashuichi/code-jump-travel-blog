@@ -17,7 +17,7 @@ function HomePage() {
                 } = articles[articleId];
 
             const pickUpArticle: JSX.Element =
-                <article key={key} className='article' style={styles.pickUp}>
+                <article key={key} className="article" style={styles.pickUp}>
                     <img src={`${data.img}`} alt=''></img>
                     <p className='articleTitle' style={styles.pickUpTitle}>
                         {data.title}
@@ -35,9 +35,7 @@ function HomePage() {
             <section id='pickUpArea' style={styles.pickUpArea}>
                 {pickUpArticles([0, 1, 2])}
             </section>
-            <section id="mainArea">
-                <Outlet />
-            </section>
+            <Outlet />
         </main>
     )
 }

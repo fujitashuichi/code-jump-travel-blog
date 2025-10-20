@@ -34,6 +34,7 @@ iframe {
 
 
 .App {
+	width: 100%;
 	font-family: "Noto Sans", "Noto Sans JP", sans-serif
 }
 
@@ -142,4 +143,37 @@ main {
 	padding: 12px 0;
 	font-size: 0.75rem;
 	text-align: center;
+}
+
+
+@media screen and (max-width: 720px) {
+	#pickUpArea {
+		flex-direction: column;
+	}
+
+	#pickUpArea .article {
+		width: 100%!important;
+	}
+
+	main #container {
+		flex-direction: column;
+	}
+
+	#container #mainArea {
+		width: 100%!important;
+	}
+
+	#container #asideArea {
+		width: 100%!important;
+		padding: 0!important;
+	}
+
+	#footer .flex {
+		flex-direction: column;
+	}
+
+	#footer section {
+		width: 100%;
+		margin-bottom: 50px;
+	}
 }

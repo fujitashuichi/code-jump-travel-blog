@@ -16,7 +16,7 @@ function Footer() {
 
     return (
         <footer id='footer'>
-            <div style={styles.inner}>
+            <div className='flex' style={styles.inner}>
                 <Section id='about'>
                     <Title>About</Title>
                     <p style={styles.p}>テキストテキストテキストテキストテキストテキストテ キストテキストテキストテキスト テキストテキストテ キストテキストテキストテキストテキストテキストテキ ストテキスト テキストテキストテキストテキストテキ ストテキストテキストテキストテキストテキスト</p>
